@@ -15,6 +15,7 @@ jobs:
     - uses: actions/setup-go@v4
 
     - name: Build
+      run: go env -w GOFLAGS=-buildvcs=false
       run: go build -v ./...
 
   tests:
