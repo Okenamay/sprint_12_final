@@ -1,9 +1,5 @@
 name: builder-tester
-
-on:
-  push:
-    # Запускаем билдер при каждом пуше в main:
-    branches: ["main"]
+on: push
 
 jobs:
   build:
