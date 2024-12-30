@@ -50,17 +50,3 @@ jobs:
 
     - name: Test
       run: go test -race -v ./...
-  
-  lint:
-    # Проверяем код на соответствие стилю и отсутствие логических ошибок
-    needs: [tests, tests-race]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-go@v4
-      # Задолбался я с этим линтером, постоянно ошибки "Error: /usr/bin/tar: ../../../go/pkg/mod/gopkg.in/yaml.v3@v3.0.1/resolve.go: Cannot open: File exists"
-      - uses: golangci/golangci-lint-action@v3
-        with:
-          version: latest
-          skip-pkg-cache: true
-          skip-build-cache: true
