@@ -20,8 +20,8 @@ jobs:
     # git config --global --add safe.directory /__w/sprint_12_final/sprint_12_final
     # error obtaining VCS status: exit status 128
     # Use -buildvcs=false to disable VCS stamping.
-    # - name: Prep
-    #   run: go env -w GOFLAGS=-buildvcs=false
+    - name: Prep
+      run: go env -w GOFLAGS=-buildvcs=false
 
     - name: Build
       run: go build -v ./...
