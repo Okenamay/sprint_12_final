@@ -1,5 +1,4 @@
 name: builder-tester
-
 on: push
 
 jobs:
